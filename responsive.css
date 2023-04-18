@@ -1,0 +1,69 @@
+    body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Barra lateral izquierda */
+    .item {
+        background-color: #6ffa4d;
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Elementos de la barra lateral */
+    .item-item {
+        padding: 10px;
+        margin: 5px;
+        background-color: #661162;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0px -3px 3px #202020;
+    }
+
+    /* Sección principal */
+    .main-section {
+        flex-basis: 80%;
+        padding: 20px;
+        background-color: #fd6be56b;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #f80404;
+    }
+
+    @media (max-width: 640px) {
+        body {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Barra lateral en la parte inferior */
+        .item {
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-basis: auto;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: #64e8fa;
+            box-shadow: 0px -5px 5px #df7bfd;
+        }
+
+        /* Elementos de la barra lateral en horizontal */
+        .item-item {
+            margin: 0;
+            flex-grow: 1;
+            width: 33.33%;
+            border-radius: 0;
+            border-top: 1px solid #ee3fc8bb;
+            text-align: center;
+        }
+
+        /* Sección principal ocupa todo el ancho */
+        .main-section {
+            flex-basis: 100%;
+            margin-top: 50px;
+        }
+    }
